@@ -1,0 +1,61 @@
+/* Seção Demandantes */
+
+.demandantes-intro {
+    color: var(--charcoal);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.demandantes-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.demandante-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    max-width: 720px;
+    width: 100%;
+}
+
+.demandante-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+}
+
+.demandante-video {
+    width: 100%;
+    background: var(--charcoal);
+}
+
+.demandante-video video {
+    width: 100%;
+    display: block;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.demandante-info {
+    padding: 1.4rem;
+    text-align: center;
+}
+
+.demandante-nome {
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+}
+
+.demandante-texto {
+    color: var(--charcoal);
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .demandante-video video {
+          max-height: 260px;
+    }
+}
