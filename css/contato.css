@@ -1,0 +1,35 @@
+/* Caixa "Fale com a equipe" da seção Contato */
+
+.contact-info-box {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 2rem;
+    height: 100%;
+}
+
+.contact-info-title {
+    color: var(--green-dark);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.contact-info-lead {
+    text-align: center;
+    color: var(--charcoal);
+    margin-bottom: 1.25rem;
+}
+
+.contact-info-item {
+    color: var(--charcoal);
+    margin-bottom: 0.6rem;
+}
+
+.contact-info-box hr {
+    margin: 1.25rem 0;
+}
+
+.contact-info-hours {
+    color: var(--charcoal);
+    margin: 0;
+}
