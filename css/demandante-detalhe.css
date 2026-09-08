@@ -49,6 +49,54 @@
     margin-bottom: 1.5rem;
 }
 
+.entrevista-resumo-texto {
+    color: var(--charcoal);
+    max-width: 760px;
+    margin-bottom: 1.75rem;
+}
+
+.entrevista-resumo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.entrevista-resumo-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 1.5rem;
+}
+
+.entrevista-resumo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+}
+
+.entrevista-resumo-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--green-dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
+}
+
+.entrevista-resumo-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--charcoal);
+}
+
+.entrevista-resumo-card li {
+    margin-bottom: 0.6rem;
+}
+
+.entrevista-resumo-card li:last-child {
+    margin-bottom: 0;
+}
+
 .entrevista-galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -157,8 +205,3 @@
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .entrevista-video video {
-        max-height: 260px;
-    }
-}
