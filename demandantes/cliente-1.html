@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrevista com Cliente | IFTechHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/demandante-detalhe.css">
+  <link rel="shortcut icon" href="../img/fivicon/fivicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">IFTechHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#demandantes">Demandantes</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-outline-light btn-sm fw-bold" href="../area-participante.html">Área do Participante</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cabeçalho da entrevista -->
+  <section class="py-5 bg-white">
+    <div class="container" style="max-width: 900px;">
+      <a href="../index.html#demandantes" class="entrevista-voltar"><i class="fas fa-arrow-left"></i> Voltar para Demandantes</a>
+      <h1 class="entrevista-titulo">Depoimento de Cliente</h1>
+      <p class="entrevista-subtitulo">Entrevista completa sobre a experiência com a IFTechHub</p>
+    </div>
+  </section>
+
+  <!-- Vídeo -->
+  <section class="py-2 bg-white">
+    <div class="container" style="max-width: 900px;">
+      <div class="entrevista-video">
+        <video controls preload="metadata" poster="../img/demandantes/poster-cliente-1.jpg">
+          <source src="../video/demandantes/cliente-1.mp4" type="video/mp4">
+          Seu navegador não suporta a exibição de vídeos.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria de fotos -->
+  <section class="py-5 bg-light">
+    <div class="container" style="max-width: 900px;">
+      <h2 class="entrevista-secao-titulo">Fotos</h2>
+      <div class="entrevista-galeria">
+        <button type="button" class="entrevista-foto" data-src="../img/demandantes/foto-cliente-1-1.jpg">
+          <img src="../img/demandantes/foto-cliente-1-1.jpg" alt="Foto 1 da visita ao cliente">
+        </button>
+        <button type="button" class="entrevista-foto" data-src="../img/demandantes/foto-cliente-1-2.jpg">
+          <img src="../img/demandantes/foto-cliente-1-2.jpg" alt="Foto 2 da visita ao cliente">
+        </button>
+        <button type="button" class="entrevista-foto" data-src="../img/demandantes/foto-cliente-1-3.jpg">
+          <img src="../img/demandantes/foto-cliente-1-3.jpg" alt="Foto 3 da visita ao cliente">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entrevista -->
+  <section class="py-5 bg-white">
+    <div class="container" style="max-width: 900px;">
+      <h2 class="entrevista-secao-titulo">A entrevista</h2>
+
+      <div class="entrevista-pergunta">
+        <h3>Como surgiu a demanda que trouxe você até a IFTechHub?</h3>
+        <p>[Espaço reservado para a resposta do cliente.]</p>
+      </div>
+
+      <div class="entrevista-pergunta">
+        <h3>Como foi o processo de desenvolvimento junto à equipe?</h3>
+        <p>[Espaço reservado para a resposta do cliente.]</p>
+      </div>
+
+      <div class="entrevista-pergunta">
+        <h3>Qual foi o resultado para o seu negócio ou projeto?</h3>
+        <p>[Espaço reservado para a resposta do cliente.]</p>
+      </div>
+
+      <div class="entrevista-pergunta">
+        <h3>Você recomendaria a IFTechHub? Por quê?</h3>
+        <p>[Espaço reservado para a resposta do cliente.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox de fotos -->
+  <div class="entrevista-lightbox" id="fotoLightbox" aria-hidden="true">
+    <button type="button" class="entrevista-lightbox-close" id="fotoLightboxClose" aria-label="Fechar imagem ampliada">&times;</button>
+    <img src="" alt="" class="entrevista-lightbox-img" id="fotoLightboxImg">
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-primary text-white">
+    <div class="container text-center">
+      <strong>© 2025 IFTechHub</strong>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    const fotos = document.querySelectorAll('.entrevista-foto');
+    const lightbox = document.getElementById('fotoLightbox');
+    const lightboxImg = document.getElementById('fotoLightboxImg');
+    const closeBtn = document.getElementById('fotoLightboxClose');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
+
+    fotos.forEach((foto) => {
+      foto.addEventListener('click', () => {
+        openLightbox(foto.dataset.src, foto.querySelector('img').alt);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+  </script>
+</body>
+</html>
